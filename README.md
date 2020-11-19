@@ -1,4 +1,4 @@
-# remote-typist
+# remote-typist (Forked from arindas/remote-typist/)
 
 FastAPI server to type on a remote computers keyboard (where the server is
 running).
@@ -30,3 +30,9 @@ WAIT_DURATION=5 ./start-server.bash
 ```
 
 Now visit `http://${HOST}:${PORT}` to see the form.
+
+If on Windows:-
+```
+uvicorn --host 0.0.0.0 main:app
+
+```
