@@ -1,5 +1,6 @@
 import os
 import time
+import random
 
 from fastapi.templating import Jinja2Templates
 from fastapi import FastAPI, Form, Request
@@ -46,13 +47,13 @@ def type_out_text(text: str):
 
         if key is not None:
             type_key(key)
-
+            time.sleep(random.uniform(0.05, 0.1))
         prev = char
 
 
 def wait_for_user():
     #Default wait value 6 seconds
-    wait_duration = os.getenv('WAIT_DURATION', 6)
+    wait_duration = os.getenv('WAIT_DURATION', 5)
     time.sleep(int(wait_duration))
 
 
